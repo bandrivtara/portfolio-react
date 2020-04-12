@@ -1,0 +1,8 @@
+.contact {
+    grid-column: 9/10;
+    grid-row: 4/10;
+    &--vertical {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+    }
+}
