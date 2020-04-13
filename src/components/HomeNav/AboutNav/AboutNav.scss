@@ -2,18 +2,10 @@
     position: relative;
     grid-column: 1/3;
     grid-row: 1/10;
-    border-right: 1px solid black;
-    &__text::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 60%;
-        background-color: #7beec7;
-        height: 14px;
-    }
     &__text {
         display: flex;
         align-items: center;
+        animation: 1.4s ease-out 0s 1 showTitle;
         &--big-letter {
             font-size: 90px;
             font-weight: 100;
@@ -27,24 +19,40 @@
         }
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: #7beec7;
+        height: 8px;
+        animation: 2.4s ease-out 0s 1 slideInFromLeft;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        background: #000;
+        height: 100%;
+        width: 1px;
+        animation: 1.4s ease-out 0s 1 slideInFromUp;
+    }
+
     &--v-line {
         position: absolute;
         background-color: #7beec7;
-        width: 40%;
-        height: 3px;
+        width: 3px;
+        height: 100%;
         top: 0;
-        left: 0;
+        right: 0;
+        transition: 0.6s;
+        opacity: 0;
     }
 
     &:hover > &--v-line {
-        animation: createline linear 5s;
-    }
-
-    @keyframes createline {
-        0% {width: 40%;}
-        25% {width: 100%;}
-        50% {height: 3px;}
-        100% {height: 100%;}
+        animation: createline linear 60s;
+        opacity: 1;
     }
 }
 

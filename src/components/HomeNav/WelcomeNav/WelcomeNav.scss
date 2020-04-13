@@ -1,6 +1,19 @@
 .welcome {
+    position: relative;
     grid-column: 3/10;
     grid-row: 1/4;
-    border-bottom: 1px solid black;
     text-align: center;
+    & h1 {
+        animation: 1.4s ease-out 0s 1 showTitle;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background: #000;
+        width: 100%;
+        height: 1px;
+        animation: 1.4s ease-out 0s 1 slideInFromRight;
+    }
 }
+

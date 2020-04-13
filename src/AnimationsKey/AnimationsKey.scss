@@ -1,0 +1,82 @@
+//show on hover
+@keyframes createline {
+    0% {height: 0%; opacity: 1;}
+    1% {height: 100%; opacity: 1;}
+    100% {height: 100%; opacity: 1;}
+}
+
+@keyframes createline-left {
+    0% {height: 0;}
+    1% {height: 101vh;}
+    100% {height: 101vh;}
+}
+@keyframes createline-right {
+    0% {height: 0;}
+    1% {height: 100%;}
+    100% {height: 100%;}
+}
+@keyframes createline-h {
+    0% {width: 0;}
+    1% {width: 100%;}
+    100% {width: 100%;}
+}
+
+//show on load
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromUp {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromDown {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes showText {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 0;
+      }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes showTitle {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+

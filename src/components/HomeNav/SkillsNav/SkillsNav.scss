@@ -1,8 +1,69 @@
 .skills {
+    position: relative;
     grid-column: 6/9;
     grid-row: 4/10;
-    border-right: 1px solid black;
+    & h3 {
+        animation: 2.4s ease-out 0s 1 showText;
+    }
+
     span {
         font-size: 36px;
+        color: #64bea0;
     }
-}
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #000;
+        height: 100%;
+        width: 1px;
+        animation: 1.4s ease-out 0s 1 slideInFromDown;
+    }
+    
+    &--v-line-left {
+        position: absolute;
+        background-color: #7beec7;
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: 0.6s;
+        opacity: 0;
+    }
+
+    &--v-line-right {
+        position: absolute;
+        background-color: #7beec7;
+        width: 3px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        transition: 0.6s;
+        opacity: 0;
+    }
+    &--h-line {
+        position: absolute;
+        background-color: #7beec7;
+        width: 100%;
+        height: 2px;
+        top: 0;
+        right: 0;
+        transition: 0.6s;
+        opacity: 0;
+    }
+    &:hover > &--v-line-left {
+        animation: createline-right linear 60s;
+        opacity: 1;
+    }
+
+    &:hover > &--v-line-right {
+        animation: createline-right linear 60s;
+        opacity: 1;
+    }
+    &:hover > &--h-line {
+        animation: createline-h linear 60s;
+        opacity: 1;
+    }
+} 
