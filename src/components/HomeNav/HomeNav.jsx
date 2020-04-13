@@ -17,10 +17,10 @@ const HomeNav = (props) => {
     return (
         <div className="main page">
             <WelcomeNav/>
-            <Link className="about centered" to="/about"><AboutNav /></Link>
-            <Link className="projects" to="/projects"><ProjectsNav /></Link>
-            <Link className="skills" to="/skills"><SkillsNav /></Link>
-            <Link className="contact centered" to="/contact"><ContactNav /></Link>
+            <Link className="about-nav centered" to="/about"><AboutNav /></Link>
+            <Link className="projects-nav" to="/projects"><ProjectsNav /></Link>
+            <Link className="skills-nav" to="/skills"><SkillsNav /></Link>
+            <Link className="contact-nav centered" to="/contact"><ContactNav /></Link>
         </div>
     )
 }

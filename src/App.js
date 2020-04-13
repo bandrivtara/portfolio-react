@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.scss';
-import './resetStyle.scss'
-import './pageTransitions.scss'
-import HomeNav from './components/HomeNav/HomeNav';
-import About from './components/About/About';
+import './resetStyle.scss';
+import './pageTransitions.scss';
 import { Switch, Route, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+import Contact from './components/Contact/Contact';
+import HomeNav from './components/HomeNav/HomeNav';
+import About from './components/About/About';
 import Projects from './components/Projects/Projects';
-import './AnimationsKey/AnimationsKey.scss'
+import Skills from './components/Skills/Skills';
+
+import './AnimationsKey/AnimationsKey.scss';
 
 
 class App extends Component {
@@ -40,16 +44,21 @@ class App extends Component {
     const currentKey = location.pathname.split('/')[1];
 
     return (
-      <TransitionGroup component='div' className='App'>
-        <CSSTransition key={currentKey} timeout={timeout} classNames='pageSlider' mountOnEnter={false} unmountOnExit={true}>
-          <div className={this.getPathDepth(location) - this.state.prevDepth >= 0 ? 'down' : 'up'}>
-            <Switch location={location}>
-              <Route exact path="/" component={HomeNav} />
-              <Route exact path="/projects" component={Projects} />
-            </Switch>
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
+      <Fragment>
+        <TransitionGroup component='div' className='App'>
+          <CSSTransition key={currentKey} timeout={timeout} classNames='pageSlider' mountOnEnter={false} unmountOnExit={true}>
+            <div className={this.getPathDepth(location) - this.state.prevDepth >= 0 ? 'down' : 'up'}>
+              <Switch location={location}>
+                <Route exact path="/" component={HomeNav} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/skills" component={Skills} />
+                <Route exact path="/contact" component={Contact} />
+              </Switch>
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+      </Fragment>
     )
 
   }

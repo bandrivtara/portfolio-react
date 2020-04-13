@@ -6,9 +6,9 @@ import { Fragment } from 'react';
 const ContactNav = (props) => {
   return (
     <Fragment>
-      <hr className="contact--v-line"/>
+      <hr className="contact-nav--v-line"/>
       <div>
-        <h2 class="contact--vertical">Contact me</h2>
+        <h2 class="contact-nav--vertical">Contact me</h2>
       </div>
     </Fragment>
   )
