@@ -1,5 +1,6 @@
 html { overflow:  hidden; }
 body {
+    cursor: url(./assets/cursor.svg), auto;
     font-family: "Montserrat", sans-serif;
     p, h1, h2, h3, h4, h5, h6, span {
         font-weight: 300;
@@ -22,10 +23,15 @@ body {
     h3 {
         font-size: 23px;
         line-height: 50px;
+        animation: 3s ease-out 0s 1 showTitle;
     }
     hr {
         border: none;
         margin: 0;
+    }
+    button {
+        position: relative;
+        cursor: url(./assets/cursor.svg), auto;
     }
 }
 
@@ -37,7 +43,6 @@ body {
 }
 
 .main {
-    cursor: pointer;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);

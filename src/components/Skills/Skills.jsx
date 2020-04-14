@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './Skills.scss';
-import AnimationPerson from '../../AnimationsKey/AnimationPerson';
+import AnimationPerson from '../../Animations/AnimationPerson';
 
 const Skills = (props) => {
   return (

@@ -1,20 +1,18 @@
+@import '../../../Scss/inheritence.scss';
 .contact-nav {
+    cursor: url(../../../assets/arrow-down.svg), pointer;
     position: relative;
     grid-column: 9/10;
     grid-row: 4/10;
     &--vertical {
         writing-mode: vertical-lr;
         text-orientation: mixed;
-        animation: 2.4s ease-out 0s 1 showText;
     }
     &::before {
-        content: '';
-        position: absolute;
+        @extend %h-stick;
         top: 0;
         width: 100%;
-        background-color: #7beec7;
-        height: 8px;
-        animation: 2.4s ease-out 0s 1 slideInFromRight;
+        animation: $stick-during slideInFromRight;
     }
 
     &--v-line {

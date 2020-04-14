@@ -11,7 +11,8 @@ import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 
-import './AnimationsKey/AnimationsKey.scss';
+import './Animations/AnimationsKey.scss';
+import './Scss/inheritence.scss'
 
 
 class App extends Component {

@@ -1,26 +1,20 @@
+@import '../../Scss/inheritence.scss';
 .skills {
     &__info {
         position: relative;
         grid-column: 1/3;
         grid-row: 1/10;
         &::after {
-            content: '';
-            position: absolute;
+            @extend %v-line;
             right: 0;
-            width: 1px;
-            background-color: black;
-            height: 100%;
-            animation: 2.4s ease-out 0s 1 slideInFromUp;
+            height: 200%;
+            animation: $line-during slideInFromUp;
         }
         &::before {
-            content: '';
-            position: absolute;
-            top: 0;
+            @extend %v-stick;
+            top: -10%;
             right: 0;
-            width: 8px;
-            background-color: #7beec7;
-            height: 20%;
-            animation: 2.4s ease-out 0s 1 slideInFromUp;
+            animation: $stick-during slideInFromUp;
         }
     }
     &__filter {
@@ -28,27 +22,20 @@
         grid-column: 1/10;
         grid-row: 9/10;
         &::before {
-            content: '';
-            position: absolute;
+            @extend %h-line;
             top: 0;
-            width: 100%;
-            background-color: black;
-            height: 1px;
-            animation: 2.4s ease-out 0s 1 slideInFromLeft;
+            animation: $line-during slideInFromLeft;
         }
         &::after {
-            content: '';
-            position: absolute;
+            @extend %h-stick;
             top: 0;
             right: 0;
-            height: 8px;
-            background-color: #7beec7;
-            width: 20%;
-            animation: 2.4s ease-out 0s 1 slideInFromRight;
+            animation: $stick-during slideInFromRight;
             z-index: -100;
         }
     }
     &__back {
+        cursor: url(../../assets/arrow-up.svg), pointer;
         position: relative;
         grid-column: 9/10;
         grid-row: 1/10;
@@ -68,14 +55,10 @@
             opacity: 0;
         }
         &::before {
-            content: '';
-            position: absolute;
+            @extend %v-stick;
             bottom: 0;
             left: -8px;
-            width: 8px;
-            background-color: #7beec7;
-            height: 20%;
-            animation: 2.4s ease-out 0s 1 slideInFromUp;
+            animation: $stick-during slideInFromUp;
             z-index: -100;
         }
     
@@ -84,13 +67,9 @@
             opacity: 1;
         }
         &::after {
-            content: '';
-            position: absolute;
+            @extend %v-line;
             left: 0;
-            width: 1px;
-            background-color: black;
-            height: 100%;
-            animation: 2.4s ease-out 0s 1 slideInFromUp;
+            animation: $line-during slideInFromUp;
         }
     }
     &__description {
@@ -98,13 +77,9 @@
         grid-column: 3/9;
         grid-row: 1/2;
         &::before {
-            content: '';
-            position: absolute;
+            @extend %h-line;
             bottom: 0;
-            width: 100%;
-            background-color: black;
-            height: 1px;
-            animation: 2.4s ease-out 0s 1 slideInFromRight;
+            animation: $line-during slideInFromRight;
         }
     }
     &__portret {
@@ -112,8 +87,6 @@
         grid-column: 3/9;
         grid-row: 2/9;
         svg {
-            width: 60%;
-            height: 88%;
             .st0 {
                 stroke-dasharray: 1760 ;
                 animation: 3s ease-out 0s 1 animate-svg-body;
@@ -129,7 +102,4 @@
             }
         }
     }
-
-    
-
 }

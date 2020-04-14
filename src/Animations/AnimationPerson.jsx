@@ -2,7 +2,7 @@ import React from 'react';
 
 const AnimationPerson = () => {
     return (
-        <svg>
+        <svg width="100%" height="90%" viewBox="0 0 540 540">
           <g>
             <g>
               <path className="st1" d="M239.7,260.2c0.5,0,1,0,1.6,0c0.2,0,0.4,0,0.6,0c0.3,0,0.7,0,1,0c29.3-0.5,53-10.8,70.5-30.5

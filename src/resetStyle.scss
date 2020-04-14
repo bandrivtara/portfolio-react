@@ -46,3 +46,12 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+button {
+	color: inherit;
+	border: none;
+	background: inherit;
+	&:focus {
+		outline: none;
+	}
+}

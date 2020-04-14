@@ -5,7 +5,7 @@ import style from './AboutNav.scss';
 const AboutNav = (props) => {
     return (
         <Fragment>
-          <div className="about-nav__text">
+          <div className="about-nav__text show-first">
             <span class="about-nav__text--big-letter">Hello</span>
             <h2>My <br />name is <br /> Taras</h2>
           </div>

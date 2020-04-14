@@ -1,10 +1,9 @@
+@import '../../../Scss/inheritence.scss';
 .skills-nav {
+    cursor: url(../../../assets/arrow-down.svg), pointer;
     position: relative;
     grid-column: 6/9;
     grid-row: 4/10;
-    & h3 {
-        animation: 2.4s ease-out 0s 1 showText;
-    }
 
     span {
         font-size: 36px;
@@ -12,14 +11,10 @@
     }
 
     &::after {
-        content: '';
-        position: absolute;
+        @extend %v-line;
         right: 0;
         top: 0;
-        background: #000;
-        height: 100%;
-        width: 1px;
-        animation: 1.4s ease-out 0s 1 slideInFromDown;
+        animation: $line-during slideInFromDown;
     }
     
     &--v-line-left {
