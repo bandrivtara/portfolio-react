@@ -4,30 +4,45 @@ import AnimationEye from '../../Animations/AnimationEye';
 import { Link } from 'react-router-dom';
 import style from './Projects.scss';
 
+import projectDeskImage from '../../assets/DeskOfPlans.jpg';
+import projectPortfolioImage from '../../assets/portfolio-react.jpg';
+import projectSNImage from '../../assets/SocialNetwork.png';
+import projectLetsSurfImage from '../../assets/LetsSurf.png';
+
 let buttons = [
   {
     id: 1,
-    descr: 'I used the skills: Gulp, Sass, jquery, RWD. (Also animate.css, wow.js, slick). Description: main project, made using a modern template with animations, sliders and responsiveness.',
-    image: 'image1',
-    skills: ['React', 'Sass ', 'Gulp ']
+    name: 'Social Network SPA',
+    descr: 'A social network analogue with server requests. Used css-module to style SPA. The structure is divided into three main blocks: User Interface, Business Logic Layer and API files requests. Was using redux like global storage. Currently profile page, friends page, homepage and authorization have been created. A dialog page and a music player are currently being developed.',
+    image: projectSNImage,
+    skills: ['React', 'Redux', 'React-Router', 'REST API', 'css-module'],
+    live: 'https://bandrivtara.github.io/SocialNetworkSite/',
+    code: 'https://github.com/bandrivtara/SocialNetworkSite'
   },
   {
     id: 2,
-    descr: 'Design made in the quality of a motivational board (list). A real target table has been restored',
-    image: 'image2',
-    skills: ['React ', 'Sass ', 'Gulp ']
+    name: 'Lines Portfolio SPA',
+    descr: 'This page is done with the main aim for portfolio. Style is executed with combination of the following technique: grid-layout, react-TransitionGroup, Sass. All animations are done without the use of any support libraries.',
+    image: projectPortfolioImage,
+    skills: ['React ', 'Sass ', 'React-Router', 'Transition Group']
   },
   {
     id: 3,
-    descr: 'I used the skills: React JS. Description: done on the drawing of the board - left side adds and after clicking deletes notes; the law adds things to do, after clicking on them in the bottom, there is the option of filtering + deleting done things.',
-    image: 'image134',
-    skills: ['React ', 'Sass ', 'Gulp ']
+    name: 'Lets Surf!',
+    descr: 'Landing project, witch was writing with BEM method. Made using a modern template with animations, sliders and responsiveness. Used libraries animate.css, wow.js, slick) ',
+    image: projectLetsSurfImage,
+    skills: ['Gulp', 'Sass', 'jQuery', 'RWD'],
+    live: 'https://bandrivtara.github.io/LetsSurf-sass-gulp4-bem/',
+    code: 'https://github.com/bandrivtara/LetsSurf-sass-gulp4-bem.git'
   },
   {
     id: 4,
-    descr: '123',
-    image: 'image13',
-    skills: ['React ', 'Sass ', 'Gulp ']
+    name: 'Desk Of Plans',
+    descr: 'My first Project. Design made in the quality of a motivational board (list). A real target table has been restored',
+    image: projectDeskImage,
+    skills: ['JavaScript', 'jQuery', 'SVG'],
+    live: 'https://bandrivtara.github.io/DeskOfPlans-js-jquery/',
+    code: 'https://github.com/bandrivtara/DeskOfPlans-js-jquery.git'
   }
 ]
 
@@ -44,20 +59,30 @@ const Projects = (props) => {
 
   let takeDescr = () => {
     return buttons.filter(elem => elem.id == project)
-      .map(elem =>
-        <h3>{elem.descr}</h3>
+      .map((elem, index) =>
+        <div className="descr-text">
+          <h3 key={index}>{elem.descr}</h3>
+          <div className="links">
+            <a href={elem.code} target="_blank">Code</a>
+            <a href={elem.live} target="_blank">Live</a>
+          </div>
+        </div>
       )
   }
   let takeImage = () => {
     return buttons.filter(elem => elem.id == project)
-      .map(elem =>
-        <h3>{elem.image}</h3>
+      .map((elem, index) =>
+        <img key={index} src={elem.image} alt="image of webpage" />
       )
   }
   let takeSkills = () => {
     return buttons.filter(elem => elem.id == project)
-      .map(elem => elem.skills.map(elem => <button>{elem}</button>)
+      .map(elem => elem.skills.map((elem, index) => <button key={index}>{elem}</button>)
       )
+  }
+  let takeName = () => {
+    return buttons.filter(elem => elem.id == project)
+      .map((elem, index) => <h3 key={index}>{elem.name}</h3>)
   }
 
 
@@ -66,6 +91,7 @@ const Projects = (props) => {
       <div className="projects__list centered">
         {buttons.map(elem =>
           <button
+            key={elem.id}
             className={project == elem.id ? 'active' : null}
             onClick={() => changeProject(elem.id)}
           >
@@ -75,7 +101,7 @@ const Projects = (props) => {
         )}
       </div>
       <div className="projects__descriptions">
-        {project == 0 ? <h3>Hello</h3> : takeDescr()}
+        {project == 0 ? <h3>Choose the Project to see his description and live picture.</h3> : takeDescr()}
       </div>
       <div className="projects__visual">
         {project == 0 ? <AnimationEye /> : takeImage()}
@@ -92,7 +118,7 @@ const Projects = (props) => {
       </div>
       <div className="projects__title">
         <div className="projects__title--left centered">
-          <h3>Description</h3>
+          {project == 0 ? <h3>Descriptions</h3> : takeName()}
         </div>
         <div className="projects__title--right centered">
           <h3>Visual</h3>

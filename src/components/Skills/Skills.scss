@@ -1,5 +1,6 @@
 @import '../../Scss/inheritence.scss';
 .skills {
+
     &__info {
         position: relative;
         grid-column: 1/3;
@@ -21,6 +22,7 @@
         position: relative;
         grid-column: 1/10;
         grid-row: 9/10;
+        flex-direction: row;
         &::before {
             @extend %h-line;
             top: 0;
@@ -32,6 +34,18 @@
             right: 0;
             animation: $stick-during slideInFromRight;
             z-index: -100;
+        }
+        &--left {
+            width: 21%;
+            height: 100%;
+        }
+        &--right {
+            width: 11%;
+            height: 100%;
+        }
+        &--center {
+            flex-direction: initial;
+            width: 64%;
         }
     }
     &__back {
@@ -72,7 +86,7 @@
             animation: $line-during slideInFromUp;
         }
     }
-    &__description {
+    &__name {
         position: relative;
         grid-column: 3/9;
         grid-row: 1/2;
@@ -102,4 +116,32 @@
             }
         }
     }
+    &__icons {
+        position: absolute;
+        display: grid;
+        grid-auto-flow: row dense;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        &--body {
+            grid-column: 3/8;
+            grid-row: 5/8; 
+        }
+        &--head {
+            grid-column: 4/7;
+            grid-row: 1/5; 
+        }
+    }
 }
+
+  @for $i from 1 through 5 {
+     .icon#{$i} {
+        animation: #{$i}s ease-out 0s 1 showText;
+     }
+  }

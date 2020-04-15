@@ -42,11 +42,39 @@
             right: 0;
             animation: $line-during slideInFromUp;
         }
+        a {
+            border-bottom: 1px solid black;
+            transition: 0.6s;
+        }
+        a:hover {
+            border-bottom: 1px solid #7beec7;
+            transition: 0.6s;
+        }
     }
     &__form {
         position: relative;
         grid-column: 6/9;
         grid-row: 1/9;
+        .form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        input, textarea {
+            border-bottom: 1px solid black;
+            width: 80%;
+            margin: 2vh 0;
+        }
+        textarea {
+            height: 25%;
+            resize: none;
+        }
+         textarea:focus, input:focus {
+            outline: none;
+            border-color: #7beec7;
+        }
     }
     &__author {
         position: relative;

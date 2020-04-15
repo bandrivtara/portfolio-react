@@ -5,6 +5,9 @@
         position: relative;
         grid-column: 1/3;
         grid-row: 2/8;
+        button {
+            border-bottom: none;
+        }
         &::after {
             @extend %v-line;
             right: 0;
@@ -59,17 +62,29 @@
             animation: $line-during slideInFromUp;
             height: 150%;
         }
+        .descr-text {
+            overflow-y: scroll;
+            height: 100%;
+            margin: 0 10px;
+            margin-right: 0;
+        }
+        .links {
+            display: flex;
+            justify-content: space-around;
+            a:hover {
+                margin: 6px 0;
+                color: #7beec7;
+            }
+        }
     }
     &__visual {
         position: relative;
         grid-column: 6/9;
         grid-row: 2/8;
-        &::before {
-            @extend %h-stick;
-            bottom: 0;
-            right: 0;
-            height: 8px;
-            animation: $stick-during slideInFromRight;
+        height: 100%;
+        overflow-y: scroll;
+        img {
+            width: 100%;
         }
         svg {
             .st0 {
@@ -138,10 +153,6 @@
             width: 75%;
             float: right;
             height: 100%;
-            & > button {
-                animation: 3s ease-out 0s 1 showTitle;
-                border-bottom: 1px solid black;
-            }
         }
     }
 }
