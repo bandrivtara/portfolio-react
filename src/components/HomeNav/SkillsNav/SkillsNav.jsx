@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import style from './SkillsNav.scss';
+import './SkillsNav.scss';
 
 const SkillsNav = (props) => {
   return (

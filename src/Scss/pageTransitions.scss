@@ -54,6 +54,52 @@
   }
 
 
+@media screen and (max-width: 425px) {
+  .pageSlider-enter.up >.page {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+  }
+  .pageSlider-enter-active.up >.page {
+    opacity: 1;
+    transform: translate3d(-0%, 0, 0);
+    transition: 1000ms;
+  }
+  .pageSlider-exit.down >.page {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+  .pageSlider-exit-active.down >.page {
+    opacity: 0;
+    transform: translate3d(50, 0, 0);
+    transition:  500ms;
+  }
+
+
+  .pageSlider-enter.down {
+    position: absolute;
+    width: 100%;
+    transform: translate3d(50%, 0, 0);
+  }
+  .pageSlider-enter-active.down >.page {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+    transition: 1000ms;
+  }
+  .pageSlider-exit.up >.page {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+  .pageSlider-exit-active.up >.page {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+    transition:  500ms;
+  }
+
+}
+
+
   
 
 

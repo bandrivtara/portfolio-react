@@ -6,7 +6,7 @@
     grid-row: 4/10;
 
     span {
-        font-size: 36px;
+        font-size: 2.7vw;
         color: #64bea0;
     }
 
@@ -62,3 +62,23 @@
         opacity: 1;
     }
 } 
+
+@media screen and (max-width: 425px) {
+    .skills-nav {
+        grid-column: 2/10;
+        grid-row: 2/4;
+        h3 {
+            font-size: 3.7vw;
+            line-height: 4vh;
+            span {
+                font-size: 5.7vw;
+            }
+        }
+        &::after {
+            display: none;
+        }
+        hr {
+            display: none;
+        }
+    }
+}

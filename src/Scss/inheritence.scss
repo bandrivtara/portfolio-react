@@ -39,9 +39,9 @@ $svg-during: 3s ease-out 0s 1;
 
 //show text
 .show-first {
-    animation: 1.6s ease-out 0s 1 showTitle;
+    animation: 1.6s ease-out 0s 1 show-first;
 }
 
 .show-second {
-    animation: 5s ease-out 0s 1 showTitle;
+    animation: 3s ease-out 0s 1 show-second;
 }

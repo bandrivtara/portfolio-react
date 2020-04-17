@@ -163,3 +163,92 @@
     z-index: -10;
     overflow: hidden;
 }
+
+
+@media screen and (max-width: 425px) {
+    .projects {
+        &__back {
+            grid-column: 1/10;
+            grid-row: 9/10;
+            &--vertical {
+                writing-mode: horizontal-tb;
+            }
+            &::after {
+                width: 100%;
+                height: 1px;
+                top: 0;
+                animation: $line-during slideInFromLeft;
+            }
+        }
+        &__filter {
+            h3 {
+                margin-left: 2vw;
+                font-size: 3.7vw;
+                line-height: 4vh;
+            }
+            grid-column: 1/10;
+            grid-row: 8/9;
+            &--left {
+                display: none;
+            }
+            &--right {
+                width: 100%;
+            }
+        }
+        &__list {
+            grid-column: 8/10;
+            grid-row: 2/8;
+            h3 {
+                margin-left: 2vw;
+                font-size: 3.7vw;
+                line-height: 4vh;
+            }
+        }
+        &__descriptions {
+            grid-column: 1/8;
+            grid-row: 2/5;
+            h3 {
+                margin-left: 2vw;
+                font-size: 3.7vw;
+                line-height: 4vh;
+            }
+        }
+        &__visual {
+            grid-column: 1/8;
+            grid-row: 5/8;
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: black;
+                width: 100%;
+                height: 1px;
+                animation: 2s ease-out 0s 1 slideInFromLeft;
+                left: 0;
+            }
+        }
+        &__title {
+            grid-column: 1/10;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &::before {
+                animation: 2s ease-out 0s 1 slideInFromLeft;
+            }
+            h3 {
+                margin-left: 2vw;
+                font-size: 3.7vw;
+                line-height: 4vh;
+            }
+            &--right {
+                display: none;
+            }
+            &--left {
+                width: 100%;
+            }
+        }
+    }
+    .active > hr {
+        transform: none;
+    }
+}

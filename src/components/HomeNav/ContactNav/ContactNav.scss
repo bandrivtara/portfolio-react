@@ -31,3 +31,30 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .contact-nav {
+        grid-column: 1/10;
+        grid-row: 9/10;
+        h2 {
+            line-height: 4vh;
+            font-size: 5vw;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: black;
+            height: 1px;
+            width: 100%;
+            animation: 3s ease-out 0s 1 slideInFromRight;
+            left: 0;
+        }
+        &--vertical {
+            writing-mode: horizontal-tb;
+            text-orientation: inherit; 
+        }
+        &--v-line {
+            display: none;
+        }
+    }
+}

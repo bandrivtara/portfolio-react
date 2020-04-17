@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import './App.scss';
-import './resetStyle.scss';
-import './pageTransitions.scss';
+import './Scss/main.scss';
+import './Scss/resetStyle.scss';
+import './Scss/pageTransitions.scss';
+import './Scss/responsive.scss';
 import { Switch, Route, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 

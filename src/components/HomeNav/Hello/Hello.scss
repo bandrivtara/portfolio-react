@@ -1,0 +1,46 @@
+.hello {
+    position: relative;
+    grid-column: 1/3;
+    grid-row: 1/7;
+    &__text {
+        display: flex;
+        align-items: center;
+        &--big-letter {
+            font-size: 7vw;
+            font-weight: 100;
+            display: block;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hello {
+        span, h2 {
+            display: none;
+        }
+        position: relative;
+        grid-column: 1/2;
+        grid-row: 1/10;
+        &::after {
+            z-index: -10;
+            overflow: hidden;
+            content: '';
+            position: absolute;
+            background-color: black;
+            height: 100%;
+            width: 1px;
+            right: 0;
+            animation: 3s ease-in 0s 1 slideInFromUp;
+        }
+        h2 {
+            line-height: 5vh;
+            font-size: 8vw;
+            .mob {
+                display: none;
+            }
+        }
+    }
+}

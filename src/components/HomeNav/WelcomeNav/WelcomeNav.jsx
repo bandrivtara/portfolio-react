@@ -1,11 +1,12 @@
 import React from 'react';
 
-import style from './WelcomeNav.scss';
+import './WelcomeNav.scss';
 
 const WelcomeNav = (props) => {
     return (
         <div className='welcome centered'>
-            <h1 className="show-first">Welcome to my portfolio <br /> Front End Developer</h1>
+            <h1><span className="introduce show-first">Hello! My name is Taras <br /></span>
+                <span className="show-second">Welcome to my portfolio <br /> Front End Developer</span></h1>
         </div>
     )
 }

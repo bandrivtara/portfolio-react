@@ -8,7 +8,6 @@
         &::after {
             @extend %v-line;
             right: 0;
-            height: 200%;
             animation: $line-during slideInFromUp;
         }
         &::before {
@@ -23,6 +22,12 @@
         grid-column: 1/10;
         grid-row: 9/10;
         flex-direction: row;
+        h3 {
+            margin: 0;
+        }
+        button.active {
+            border-bottom: 1px solid #7beec7;
+        }
         &::before {
             @extend %h-line;
             top: 0;
@@ -124,7 +129,9 @@
         height: 100%;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(8, 1fr);
+        
         img {
+            transition: 0.6s;
             width: 100%;
             height: 100%;
         }
@@ -137,11 +144,78 @@
             grid-column: 4/7;
             grid-row: 1/5; 
         }
+        img:hover {
+            filter: brightness(0%);
+        }
     }
 }
 
-  @for $i from 1 through 5 {
-     .icon#{$i} {
-        animation: #{$i}s ease-out 0s 1 showText;
-     }
-  }
+@for $i from 1 through 8 {
+    .icon#{$i} {
+    animation: #{$i}s ease-out 0s 1 showIcon;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .skills__icons {
+        grid-template-rows: repeat(14, 1fr);
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .skills {
+        &__back {
+            grid-column: 1/10;
+            grid-row: 9/10;
+            &--vertical {
+                writing-mode: horizontal-tb;
+            }
+            &::after {
+                width: 100%;
+                height: 1px;
+                top: 0;
+                animation: $line-during slideInFromLeft;
+            }
+        }
+        &__info {
+            grid-column: 1/9;
+            grid-row: 7/8;
+            text-align: center;
+            h3 {
+                font-size: 4.7vw;
+                line-height: 3vh;
+            }
+        }
+        &__filter {
+            grid-column: 1/9;
+            grid-row: 8/9;
+            h3 {
+                font-size: 4.7vw;
+                line-height: 3vh;
+            }
+        }
+        &__portret {
+            grid-column: 1/9;
+            grid-row: 2/9;
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: black;
+                height: 150%;
+                width: 1px;
+                animation: 2s ease-out 0s 1 slideInFromUp;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &__name {
+            grid-column: 1/10;
+            grid-row: 1/2;
+            h3 {
+                font-size: 4.7vw;
+                line-height: 3vh;
+            }
+        }
+    }
+}
