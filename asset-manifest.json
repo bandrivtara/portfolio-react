@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.eaaece61.chunk.css",
+    "main.css": "/portfolio-react/static/css/main.84abe98d.chunk.css",
     "main.js": "/portfolio-react/static/js/main.57f76efe.chunk.js",
     "main.js.map": "/portfolio-react/static/js/main.57f76efe.chunk.js.map",
     "runtime-main.js": "/portfolio-react/static/js/runtime-main.dfdf69bc.js",
@@ -8,9 +8,9 @@
     "static/js/2.725ec4ed.chunk.js": "/portfolio-react/static/js/2.725ec4ed.chunk.js",
     "static/js/2.725ec4ed.chunk.js.map": "/portfolio-react/static/js/2.725ec4ed.chunk.js.map",
     "index.html": "/portfolio-react/index.html",
-    "precache-manifest.14f404ca876a86967413676f5f31e955.js": "/portfolio-react/precache-manifest.14f404ca876a86967413676f5f31e955.js",
+    "precache-manifest.0a71d9f594b02151b5c1c1c3727c969a.js": "/portfolio-react/precache-manifest.0a71d9f594b02151b5c1c1c3727c969a.js",
     "service-worker.js": "/portfolio-react/service-worker.js",
-    "static/css/main.eaaece61.chunk.css.map": "/portfolio-react/static/css/main.eaaece61.chunk.css.map",
+    "static/css/main.84abe98d.chunk.css.map": "/portfolio-react/static/css/main.84abe98d.chunk.css.map",
     "static/js/2.725ec4ed.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.725ec4ed.chunk.js.LICENSE.txt",
     "static/media/DeskOfPlans.jpg": "/portfolio-react/static/media/DeskOfPlans.9ce32096.jpg",
     "static/media/LetsSurf.png": "/portfolio-react/static/media/LetsSurf.9cda8f58.png",
@@ -38,7 +38,7 @@
   "entrypoints": [
     "static/js/runtime-main.dfdf69bc.js",
     "static/js/2.725ec4ed.chunk.js",
-    "static/css/main.eaaece61.chunk.css",
+    "static/css/main.84abe98d.chunk.css",
     "static/js/main.57f76efe.chunk.js"
   ]
 }
