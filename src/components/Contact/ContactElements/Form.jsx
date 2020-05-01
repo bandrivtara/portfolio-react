@@ -10,7 +10,7 @@ const Form = () => {
                 <input type="text" name="message" placeholder="topic" required /><br />
                 <textarea className="massage" name="text" placeholder="message"></textarea>
                 <div className="button">
-                    <button type="submit" className="btn-color">Wyślij</button>
+                    <button type="submit" className="btn-color"><h3>Send</h3></button>
                     <img className="airplane" src="images/airplane.png" alt="" />
                 </div>
             </form>

@@ -10,7 +10,9 @@ const Filter = (props) => {
 
   return (
     <div className="projects__filter">
-      <div className="projects__filter--left centered"></div>
+      <div className="projects__filter--left centered">
+        <h3>Go to my <a href="https://github.com/bandrivtara">GitHub</a></h3>
+      </div>
       <div className="projects__filter--right centered">
         {takeSkills()}
       </div>

@@ -3,7 +3,7 @@ import React from 'react';
 const Social = () => {
     return (
         <div className="contact__social-net centered">
-            <h3>Contact with me in...</h3>
+            <h3>Contact with me via...</h3>
             <div className="facebook">
                 <h3><a href="https://www.facebook.com/tarasbandrivskyy">Facebook</a></h3>
             </div>

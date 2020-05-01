@@ -1,5 +1,8 @@
 html { overflow:  hidden; }
 body {
+    height: 100vh;
+    width: 100vw;
+    overflow:  hidden;
     cursor: url(../assets/cursor.svg), auto;
     font-family: "Montserrat", sans-serif;
     p, h1, h2, h3, h4, h5, h6, span {
@@ -17,16 +20,18 @@ body {
     h1 {
         font-size: 6vw;
         line-height: 16vh;
+        animation: 2s ease-out 0s 1 show-first;
     }
 
     h2 {
         font-size: 4vw;
         line-height: 11vh;
+        animation: 4s ease-out 0s 1 show-second;
     }
     h3 {
         font-size: 1.7vw;
         line-height: 8vh;
-        animation: 2s ease-out 0s 1 showTitle;
+        animation: 4s ease-out 0s 1 show-third;
     }
     hr {
         border: none;

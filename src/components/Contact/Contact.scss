@@ -61,6 +61,12 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            button:hover {
+                color: #7beec7;
+                h3 {
+                    font-weight: 400;
+                }
+            }
         }
         input, textarea {
             border-bottom: 1px solid black;

@@ -8,7 +8,7 @@ const ContactNav = (props) => {
     <Fragment>
       <hr className="contact-nav--v-line" />
       <div>
-        <h2 className="contact-nav--vertical show-second">Contact me</h2>
+        <h2 className="contact-nav--vertical">Contact me</h2>
       </div>
     </Fragment>
   )

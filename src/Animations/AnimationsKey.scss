@@ -63,7 +63,6 @@
     0% {
       opacity: 0;
     }
-    
     100% {
       opacity: 1;
     }
@@ -72,11 +71,13 @@
     0% {
       opacity: 0;
     }
-    50% {
-      opacity: 0;
+    100% {
+      opacity: 1;
     }
-    75% {
-      opacity: 0.6;
+}
+@keyframes show-third {
+    0% {
+      opacity: 0;
     }
     100% {
       opacity: 1;

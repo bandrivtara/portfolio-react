@@ -7,23 +7,23 @@ export let projectsData = [
     {
         id: 1,
         name: 'Social Network SPA',
-        descr: 'A social network analogue with server requests. Used css-module to style SPA. The structure is divided into three main blocks: User Interface, Business Logic Layer and API files requests. Was using redux like global storage. Currently profile page, friends page, homepage and authorization have been created. A dialog page and a music player are currently being developed.',
+        descr: 'A social network analogue with server requests. Used css-module to style SPA. The structure is divided into three main blocks: User Interface, Business Logic Layer and API files requests. Redux was used like global storage. So far profile page, friends page, homepage and authorization have been created. Dialog page and music player are currently being developed.',
         image: projectSNImage,
         skills: ['React', 'Redux', 'React-Router', 'REST API', 'css-module'],
-        live: 'https://bandrivtara.github.io/SocialNetworkSite/',
-        code: 'https://github.com/bandrivtara/SocialNetworkSite'
+        live: 'https://social-netwok.herokuapp.com/',
+        code: 'https://github.com/bandrivtara/SocialNetworkSite-ownDB'
     },
     {
         id: 2,
         name: 'Lines Portfolio SPA',
-        descr: 'This page is done with the main aim for portfolio. Style is executed with combination of the following technique: grid-layout, react-TransitionGroup, Sass. All animations are done without the use of any support libraries.',
+        descr: 'The main goal of this page was to create portfolio. Style is executed with combination of the following techniques: grid-layout, react-TransitionGroup, Sass. All animations are done without using any support libraries.',
         image: projectPortfolioImage,
         skills: ['React ', 'Sass ', 'React-Router', 'Transition Group']
     },
     {
         id: 3,
         name: 'Lets Surf!',
-        descr: 'Landing project, witch was writing with BEM method. Made using a modern template with animations, sliders and responsiveness. Used libraries animate.css, wow.js, slick) ',
+        descr: 'Landing project, which was written using BEM method. Project made with responsive web design, sliders and modern templates with animation. Used libraries: animate.css, wow.js, slick) ',
         image: projectLetsSurfImage,
         skills: ['Gulp', 'Sass', 'jQuery', 'RWD'],
         live: 'https://bandrivtara.github.io/LetsSurf-sass-gulp4-bem/',
@@ -31,8 +31,8 @@ export let projectsData = [
     },
     {
         id: 4,
-        name: 'Desk Of Plans',
-        descr: 'My first Project. Design made in the quality of a motivational board (list). A real target table has been restored',
+        name: 'Motivation Board',
+        descr: 'It is my first project. The main idea was to create interactive motivation board inspired by real one. Also on the right side of the board you can see my vision of development.',
         image: projectDeskImage,
         skills: ['JavaScript', 'jQuery', 'SVG'],
         live: 'https://bandrivtara.github.io/DeskOfPlans-js-jquery/',

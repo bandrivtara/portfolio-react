@@ -10,7 +10,7 @@ const List = (props) => {
           className={props.project === elem.id ? 'active' : null}
           onClick={() => props.changeProject(elem.id)}
         >
-          <h3>Project {elem.id}</h3>
+          <h3>{elem.name}</h3>
           <hr className="projects__list--btn-underline" />
         </button>
       )}

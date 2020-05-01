@@ -5,8 +5,8 @@ const Description = (props) => {
   let takeDescr = () => {
     return props.projectsData.filter(elem => elem.id === props.project)
       .map((elem, index) =>
-        <div className="descr-text">
-          <h3 key={index}>{elem.descr}</h3>
+        <div key={index} className="descr-text">
+          <h3>{elem.descr}</h3>
           <div className="links">
             <a href={elem.code} target="_blank" rel="noopener noreferrer">Code</a>
             <a href={elem.live} target="_blank" rel="noopener noreferrer">Live</a>
