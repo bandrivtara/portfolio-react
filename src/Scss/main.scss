@@ -64,3 +64,11 @@ body {
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
 }
+
+.btn--go-to {
+    transition: 0.4s;
+}
+
+.btn--go-to:hover {
+    background-color: #e7fdf6;
+}

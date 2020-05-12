@@ -34,12 +34,14 @@
             top: 0;
             width: 200%;
             animation: $stick-during slideInFromLeft;
+            z-index: 100;
         }
         &::after {
             @extend %h-line;
             bottom: 0;
             width: 200%;
             animation: $line-during slideInFromRight;
+            z-index: 100;
         }
         h3 {
             overflow-y: scroll;

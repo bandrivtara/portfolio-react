@@ -14,10 +14,10 @@ const HomeNav = (props) => {
         <div className="main page">
             <WelcomeNav />
             <Hello className="hello centered"/>
-            <Link className="about-nav" to="/about"><AboutNav /></Link>
-            <Link className="projects-nav" to="/projects"><ProjectsNav /></Link>
-            <Link className="skills-nav" to="/skills"><SkillsNav /></Link>
-            <Link className="contact-nav centered" to="/contact"><ContactNav /></Link>
+            <Link className="about-nav btn--go-to" to="/about"><AboutNav /></Link>
+            <Link className="projects-nav btn--go-to" to="/projects"><ProjectsNav /></Link>
+            <Link className="skills-nav btn--go-to" to="/skills"><SkillsNav /></Link>
+            <Link className="contact-nav centered btn--go-to" to="/contact"><ContactNav /></Link>
         </div>
     )
 }

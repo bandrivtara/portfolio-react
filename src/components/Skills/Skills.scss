@@ -181,7 +181,7 @@
         }
         &__info {
             grid-column: 1/9;
-            grid-row: 7/8;
+            grid-row: 6/8;
             text-align: center;
             h3 {
                 font-size: 4.7vw;
@@ -198,7 +198,7 @@
         }
         &__portret {
             grid-column: 1/9;
-            grid-row: 2/9;
+            grid-row: 2/7;
             &::after {
                 content: '';
                 position: absolute;
