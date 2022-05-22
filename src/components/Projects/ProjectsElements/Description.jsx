@@ -1,25 +1,36 @@
-import React from 'react';
+import React from "react";
 
-const Description = (props) => {
-
-  let takeDescr = () => {
-    return props.projectsData.filter(elem => elem.id === props.project)
-      .map((elem, index) =>
-        <div key={index} className="descr-text">
-          <h3>{elem.descr}</h3>
+const Description = ({ activeProject }) => (
+  <div className="projects__descriptions">
+    {activeProject === null ? (
+      <h3>Choose the Project to see his description</h3>
+    ) : (
+      <div key={activeProject.id} className="descr-text">
+        <p>
+          {activeProject.date} ({activeProject.type} project)
+        </p>
+        <h3>{activeProject.descr}</h3>
+        {activeProject.type === "training" && (
           <div className="links">
-            <a href={elem.code} target="_blank" rel="noopener noreferrer">Code</a>
-            <a href={elem.live} target="_blank" rel="noopener noreferrer">Live</a>
+            <a
+              href={activeProject.code}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code
+            </a>
+            <a
+              href={activeProject.live}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live
+            </a>
           </div>
-        </div>
-      )
-  }
-
-  return (
-    <div className="projects__descriptions">
-      {props.project === 0 ? <h3>Choose the Project to see his description and live picture.</h3> : takeDescr()}
-    </div>
-  )
-}
+        )}
+      </div>
+    )}
+  </div>
+);
 
 export default Description;

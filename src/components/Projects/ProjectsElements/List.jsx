@@ -1,17 +1,25 @@
 import React from 'react';
 
-const List = (props) => {
+const List = ({activeProject, projectsData, changeProject}) => {
 
   return (
     <div className="projects__list centered">
-      {props.projectsData.map(elem =>
+      {projectsData.commercial.map(elem =>
         <button
           key={elem.id}
-          className={props.project === elem.id ? 'active' : null}
-          onClick={() => props.changeProject(elem.id)}
+          className={activeProject && activeProject.id === elem.id ? 'active' : null}
+          onClick={() => changeProject(elem)}
         >
           <h3>{elem.name}</h3>
-          <hr className="projects__list--btn-underline" />
+        </button>
+      )}
+      {projectsData.training.map(elem =>
+        <button
+          key={elem.id}
+          className={activeProject && activeProject.id === elem.id ? 'active' : null}
+          onClick={() => changeProject(elem)}
+        >
+          <h3>{elem.name}</h3>
         </button>
       )}
     </div>

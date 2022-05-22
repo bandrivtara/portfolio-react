@@ -1,22 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const Title = (props) => {
-
-  let takeName = () => {
-    return props.projectsData.filter(elem => elem.id === props.project)
-      .map((elem, index) => <h3 key={index}>{elem.name}</h3>)
-  }
-
+const Title = ({ activeProject }) => {
   return (
     <div className="projects__title">
       <div className="projects__title--left centered">
-        {props.project === 0 ? <h3>Descriptions</h3> : takeName()}
+        {activeProject ? <h3>{activeProject.name}</h3> : <h3>Descriptions</h3>}
       </div>
       <div className="projects__title--right centered">
-        <h3>Visual</h3>
+        <h3>{activeProject && activeProject.type === "commercial" ? "Participation" : "Visual"}</h3>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Title;

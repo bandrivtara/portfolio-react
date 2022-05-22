@@ -1,18 +1,26 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import './ProjectsNav.scss';
+import "./ProjectsNav.scss";
 
-const ProjectsNav = (props) => {
+const ProjectsNav = () => {
   return (
     <Fragment>
       <div>
-        <h3 className="show-second"><span>Projects</span> will show you my skills <br /><span>that</span> I improve everyday. <br /><span>I</span> hope you'll enjoy my projects or <br /><span>already</span> enjoy them. <br /><span>Have</span> fun!</h3>
+        <h3 className="show-second">
+          <span>Commercial</span> projects with
+          <br />
+          <span>Experience</span> that I gained <br />
+          <span>And</span> how am I
+          <br />
+          <span>Training</span> myself and doing <br />
+          <span>Projects</span> and skills improvements
+        </h3>
       </div>
       <hr className="projects-nav--v-line-left" />
       <hr className="projects-nav--v-line-right" />
       <hr className="projects-nav--h-line" />
     </Fragment>
-  )
-}
+  );
+};
 
 export default ProjectsNav;
